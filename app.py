@@ -10,8 +10,8 @@ app = Flask(__name__)
 app.secret_key = os.environ.get("SECRET_KEY", "bonifacic-meal-plan-secret-key-change-me")
 
 USERS = {
-    "dj": "wolfpack2026",
-    "angela": "wolfpack2026",
+    os.environ.get("DJ_USERNAME", "dj"): os.environ.get("DJ_PASSWORD", ""),
+    os.environ.get("ANGELA_USERNAME", "angela"): os.environ.get("ANGELA_PASSWORD", ""),
 }
 
 SHEET_ID = "1pgFsQUT6_pK5I5dZU1S_eyqwDBBdndDd9LkB69MW6R0"
