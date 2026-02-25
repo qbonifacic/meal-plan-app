@@ -25,10 +25,12 @@ Weekly meal plan viewer for the Bonifacic household, powered by Google Sheets.
    - `SECRET_KEY` — a random secret string for Flask sessions
    - `PORT` — Render sets this automatically
 
-5. Upload `google_creds.json` as a **Secret File** at path `/etc/secrets/google_creds.json`, then set the start command to copy it before boot:
-   ```
-   cp /etc/secrets/google_creds.json google_creds.json && gunicorn app:app --bind 0.0.0.0:$PORT
-   ```
+5. Add Google credentials (choose one):
+   - **Option A (recommended):** Set `GOOGLE_CREDS_JSON` env var with the full contents of `google_creds.json`.
+   - **Option B:** Upload `google_creds.json` as a **Secret File** at `/etc/secrets/google_creds.json`, then set the start command to:
+     ```
+     cp /etc/secrets/google_creds.json google_creds.json && gunicorn app:app --bind 0.0.0.0:$PORT
+     ```
 
 6. Deploy. The app will be live at your Render URL.
 
