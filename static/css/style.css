@@ -1,0 +1,20 @@
+.meal-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: #6c757d;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+}
+
+.meal-value {
+    font-size: 1rem;
+    margin-top: 0.15rem;
+}
+
+.highlight-today {
+    box-shadow: 0 0 0 0.15rem rgba(13, 110, 253, 0.25);
+}
+
+.highlight-tomorrow {
+    box-shadow: 0 0 0 0.15rem rgba(13, 202, 240, 0.25);
+}

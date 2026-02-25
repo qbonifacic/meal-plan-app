@@ -1,0 +1,8 @@
+google_creds.json
+__pycache__/
+*.pyc
+.env
+*.egg-info/
+dist/
+venv/
+.venv/
